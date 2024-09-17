@@ -10,13 +10,16 @@ no endpoints stable yet
 ## device
 Endpoints to manage device
 
+### general
+**/device (GET)** 
+Get all parameters for device
+
+**/device (PUT)**
+Updates all parameters for device
+
 ### audio
 **/device/audio/list (GET)**
 List available audio devices, possibly with info about lowest buffer etc.
-DATA: TBA
-
-**/device/audio/doSelect (POST)**
-Set audio device to work with. We probably can't set samplefrequency etc. Just select device.
 DATA: TBA
 
 **/device/audio/doStart (POST)**
@@ -26,20 +29,12 @@ No arguments
 No arguments
 
 **/device/audio/status (GET)**
-Returns JSON info of audio service - really - why?
+Returns JSON info of audio service
 
 ### midi
 
 **/device/midi/list (GET)**
 List available midi devices, with direction specified.
-DATA: TBA
-
-**/device/midi/doSelectIn (POST)**
-Set midi device(s) to work with. We may use many midi devices for in right?
-DATA: TBA
-
-**/device/midi/doSelectOut (POST)**
-Set midi device(s) to work with. For out, only ONE device may be selected.
 DATA: TBA
 
 **/device/midi/doStart (POST)**
@@ -50,12 +45,6 @@ No arguments
 
 **/device/midi/status (GET)**
 Returns JSON info of midi service
-
-## synth_patches
-Outside song storage
-
-## rack_patches
-Outside song storage
 
 ## songs
 Endpoints to manage songs
@@ -68,6 +57,15 @@ List songs on device
 **/songs/doDelete (POST)**
 (why not the delete method?)
 
+
+
+
+
+## synth_patches
+Outside song storage
+
+## rack_patches
+Outside song storage
 
 
 ## rack settings
